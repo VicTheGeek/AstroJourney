@@ -10,6 +10,8 @@
 		1C737C182D8CB5980068D5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C737C172D8CB5980068D5A5 /* AppDelegate.swift */; };
 		1C737C1A2D8CB59A0068D5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C737C192D8CB59A0068D5A5 /* Assets.xcassets */; };
 		1C737C1D2D8CB59A0068D5A5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C737C1B2D8CB59A0068D5A5 /* MainMenu.xib */; };
+		1C737C262D8CBAC50068D5A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1C737C252D8CBAC50068D5A5 /* SnapKit */; };
+		1C737C292D8CBD4E0068D5A5 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C737C282D8CBD4E0068D5A5 /* MainWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,7 @@
 		1C737C192D8CB59A0068D5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C737C1C2D8CB59A0068D5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1C737C1E2D8CB59A0068D5A5 /* AstroJourney.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AstroJourney.entitlements; sourceTree = "<group>"; };
+		1C737C282D8CBD4E0068D5A5 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C737C262D8CBAC50068D5A5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +54,29 @@
 		1C737C162D8CB5980068D5A5 /* AstroJourney */ = {
 			isa = PBXGroup;
 			children = (
-				1C737C172D8CB5980068D5A5 /* AppDelegate.swift */,
+				1C737C272D8CBB160068D5A5 /* App */,
 				1C737C192D8CB59A0068D5A5 /* Assets.xcassets */,
 				1C737C1B2D8CB59A0068D5A5 /* MainMenu.xib */,
 				1C737C1E2D8CB59A0068D5A5 /* AstroJourney.entitlements */,
+				1C737C2A2D8CBD560068D5A5 /* Windows */,
 			);
 			path = AstroJourney;
+			sourceTree = "<group>";
+		};
+		1C737C272D8CBB160068D5A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1C737C172D8CB5980068D5A5 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1C737C2A2D8CBD560068D5A5 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				1C737C282D8CBD4E0068D5A5 /* MainWindowController.swift */,
+			);
+			path = Windows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +95,9 @@
 			dependencies = (
 			);
 			name = AstroJourney;
+			packageProductDependencies = (
+				1C737C252D8CBAC50068D5A5 /* SnapKit */,
+			);
 			productName = AstroJourney;
 			productReference = 1C737C142D8CB5980068D5A5 /* AstroJourney.app */;
 			productType = "com.apple.product-type.application";
@@ -102,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 1C737C0B2D8CB5970068D5A5;
+			packageReferences = (
+				1C737C242D8CBAC50068D5A5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 1C737C152D8CB5980068D5A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C737C292D8CBD4E0068D5A5 /* MainWindowController.swift in Sources */,
 				1C737C182D8CB5980068D5A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +363,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C737C242D8CBAC50068D5A5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C737C252D8CBAC50068D5A5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C737C242D8CBAC50068D5A5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C737C0C2D8CB5970068D5A5 /* Project object */;
 }

@@ -55,13 +55,11 @@ class MainSplitViewController: NSSplitViewController {
         splitView.dividerStyle = .thin
         
         // Устанавливаем минимальные размеры для сайдбара и основного контента
-        if let sidebarView = sidebarViewController.view {
-            sidebarView.widthAnchor.constraint(greaterThanOrEqualToConstant: 200).isActive = true
-        }
+        let sidebarView = sidebarViewController.view
+        sidebarView.widthAnchor.constraint(greaterThanOrEqualToConstant: 200).isActive = true
         
-        if let contentView = mainContentViewController.view {
-            contentView.widthAnchor.constraint(greaterThanOrEqualToConstant: 400).isActive = true
-        }
+        let contentView = mainContentViewController.view
+        contentView.widthAnchor.constraint(greaterThanOrEqualToConstant: 400).isActive = true
         
         // Вызываем обновление контента для первого элемента
         if let firstItem = sidebarViewController.value(forKey: "items") as? [String], !firstItem.isEmpty {

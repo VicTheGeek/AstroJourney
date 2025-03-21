@@ -14,6 +14,7 @@
 		1C737C292D8CBD4E0068D5A5 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C737C282D8CBD4E0068D5A5 /* MainWindowController.swift */; };
 		1CEE4FAD2D8DCE0A00172A76 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE4FAB2D8DCE0A00172A76 /* ContentViewController.swift */; };
 		1CEE4FAE2D8DCE0A00172A76 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE4FAC2D8DCE0A00172A76 /* SidebarViewController.swift */; };
+		1CEE4FB02D8DD13F00172A76 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE4FAF2D8DD13F00172A76 /* MainSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		1C737C282D8CBD4E0068D5A5 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		1CEE4FAB2D8DCE0A00172A76 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		1CEE4FAC2D8DCE0A00172A76 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		1CEE4FAF2D8DD13F00172A76 /* MainSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		1CEE4FAA2D8DCE0A00172A76 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1CEE4FAF2D8DD13F00172A76 /* MainSplitViewController.swift */,
 				1CEE4FAB2D8DCE0A00172A76 /* ContentViewController.swift */,
 				1CEE4FAC2D8DCE0A00172A76 /* SidebarViewController.swift */,
 			);
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CEE4FB02D8DD13F00172A76 /* MainSplitViewController.swift in Sources */,
 				1C737C292D8CBD4E0068D5A5 /* MainWindowController.swift in Sources */,
 				1CEE4FAD2D8DCE0A00172A76 /* ContentViewController.swift in Sources */,
 				1C737C182D8CB5980068D5A5 /* AppDelegate.swift in Sources */,
@@ -315,6 +319,7 @@
 				DEVELOPMENT_TEAM = 8U6YK32924;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -322,6 +327,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftvibes.AstroJourney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,6 +348,7 @@
 				DEVELOPMENT_TEAM = 8U6YK32924;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -349,6 +356,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftvibes.AstroJourney;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -10,32 +10,40 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    // MARK: - Properties
+    
+    // Контроллер главного окна приложения
     private var mainWindowController: MainWindowController?
-
-    func applicationWillFinishLaunching(_ notification: Notification) {
-        // Закрываем окно по умолчанию
-        if let window = NSApplication.shared.windows.first {
-            window.close()
-        }
-    }
-
+    
+    // MARK: - NSApplicationDelegate
+    
+    // Вызывается при запуске приложения
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Настраиваем приложение как обычное настольное приложение
         NSApplication.shared.setActivationPolicy(.regular)
         
         // Создаем и показываем главное окно
         mainWindowController = MainWindowController()
-        mainWindowController?.showWindow(self)
+        mainWindowController?.showWindow(nil)
         
         // Делаем наше приложение активным
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
-
+    
+    // Вызывается перед завершением запуска приложения
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        // Закрываем окно по умолчанию, чтобы не было двух окон
+        if let window = NSApplication.shared.windows.first {
+            window.close()
+        }
+    }
+    
+    // Вызывается при завершении приложения
     func applicationWillTerminate(_ aNotification: Notification) {
         // Код для очистки при закрытии приложения
     }
-
-    // Этот метод указывает, поддерживает ли приложение безопасное восстановление состояния после перезапуска.
+    
+    // Этот метод указывает, поддерживает ли приложение безопасное восстановление состояния
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
     }
